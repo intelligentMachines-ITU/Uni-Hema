@@ -13,7 +13,7 @@ It integrates detection, classification, segmentation, morphology prediction, an
 📌 Conference: CVPR 2026
 
 
-The codebase and curated dataset will be publicly released alongside the final camera-ready version of the paper on June 3, 2026.
+The codebase and curated dataset will be released soon.
 
 @article{rehman2025unihema,
   title   = {Uni-Hema: Unified Model for Digital Hematopathology},
