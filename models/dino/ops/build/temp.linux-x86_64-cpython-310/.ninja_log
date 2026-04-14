@@ -1,0 +1,3 @@
+# ninja log v5
+0	2222	1759153519476675822	/home/iml/DINO_X/models/dino/ops/build/temp.linux-x86_64-cpython-310/home/iml/DINO_X/models/dino/ops/src/cpu/ms_deform_attn_cpu.o	8648f4c86df21f4
+1	6906	1759153524162750810	/home/iml/DINO_X/models/dino/ops/build/temp.linux-x86_64-cpython-310/home/iml/DINO_X/models/dino/ops/src/vision.o	76743e0d82a7a223

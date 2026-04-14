@@ -1,0 +1,20 @@
+{"1": "myeloblast", "2": "lymphoblast", "3": "neutrophil", "4": "atypicallymphocyte", "5": "promonocyte", "6": "monoblast", "7": "lymphocyte", "8": "myelocyte",
+ "9": "abnormalpromyelocyte", "10": "monocyte", "11": "metamyelocyte", "12": "eosinophil", "13": "basophil", "14": "none", "15": "gametocyte",
+  "16": "schizont", "17": "trophozoite", "18": "ring","19": "concentrated_leishman_parasite", "20": "leishman_parasite",  "21": "Platelet","22": "Sickle Cell", "23":"RBC", "24": "WBC" 
+  ,"25":"parasite","26":"plasmodium"
+,"27":"TBbacillus"
+,"28":"leukocyte"
+,"29":"difficult"
+}
+
+//{"1": "myeloblast", "2": "lymphoblast", "3": "neutrophil", "4": "atypical lymphocyte", "5": "promonocyte", "6": "monoblast", "7": "lymphocyte", "8": "myelocyte",
+//  "9": "abnormal promyelocyte", "10": "monocyte", "11": "metamyelocyte", "12": "eosinophil", "13": "basophil", "14": "none"}
+
+// {  "0":"Sickle Cell"}
+
+// {"1": "platelet"}
+
+// {"1": "concentrated_leishman_parasite", "2": "leishman_parasite"}
+
+
+// {"1": "person", "2": "bicycle", "3": "car", "4": "motorcycle", "5": "airplane", "6": "train", "7": "truck", "8": "traffic light", "9": "fire hydrant", "10": "stop sign", "11": "dog","12": "skateboard","13": "stroller","14": "scooter", "15": "other vehicle"}
