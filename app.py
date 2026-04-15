@@ -55,10 +55,10 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # -----------------------------
 # LOAD MODEL
 # -----------------------------
-args = SLConfig.fromfile(model_config_path)
+args = SLConfig.fromfile(config_path )
 model, criterion, postprocessors = build_model_main(args)
 
-checkpoint = torch.load(model_checkpoint_path, map_location="cpu")
+checkpoint = torch.load(checkpoint_path, map_location="cpu")
 model.load_state_dict(checkpoint["model"], strict=False)
 
 model.to(device)
