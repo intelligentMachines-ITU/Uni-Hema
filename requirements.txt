@@ -10,3 +10,4 @@ addict
 yapf
 timm
 transformers
+pycocotools
