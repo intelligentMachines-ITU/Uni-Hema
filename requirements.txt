@@ -13,3 +13,4 @@ transformers
 pycocotools
 scikit-learn
 evaluate
+matplotlib
