@@ -50,6 +50,19 @@ checkpoint_path = hf_hub_download(
     repo_id=repo_id,
     filename="checkpoint0023.pth"   # or pytorch_model.bin if you switch
 )
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+# -----------------------------
+# LOAD MODEL
+# -----------------------------
+args = SLConfig.fromfile(model_config_path)
+model, criterion, postprocessors = build_model_main(args)
+
+checkpoint = torch.load(model_checkpoint_path, map_location="cpu")
+model.load_state_dict(checkpoint["model"], strict=False)
+
+model.to(device)
+model.eval()
 
 cloze_samples_seg = [
     ["sample_seg/10.jpg"],
