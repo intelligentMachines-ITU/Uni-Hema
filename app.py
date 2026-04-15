@@ -2,7 +2,7 @@ import gradio as gr
 import torch
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
-from models.dino.ops import MultiScaleDeformableAttention as MSDA
+#from models.dino.ops import MultiScaleDeformableAttention as MSDA
 
 from main import build_model_main
 from util.slconfig import SLConfig
