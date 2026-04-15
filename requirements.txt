@@ -12,3 +12,4 @@ timm
 transformers
 pycocotools
 scikit-learn
+evaluate
