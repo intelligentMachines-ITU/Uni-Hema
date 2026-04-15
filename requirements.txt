@@ -11,4 +11,4 @@ yapf
 timm
 transformers
 pycocotools
-sklearn
+scikit-learn
