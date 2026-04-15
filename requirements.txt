@@ -14,3 +14,4 @@ pycocotools
 scikit-learn
 evaluate
 matplotlib
+opencv-python
