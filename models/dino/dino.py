@@ -39,7 +39,7 @@ from transformers import BertTokenizer, BertModel
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 from transformers.modeling_outputs import BaseModelOutput
 # from transformers import BartTokenizer, BartForConditionalGeneration
-from transformers import T5Tokenizer, T5ForConditionalGeneration, AdamW
+from transformers import T5Tokenizer, T5ForConditionalGeneration
 from ..registry import MODULE_BUILD_FUNCS
 from .dn_components import prepare_for_cdn,dn_post_process
 # from deformable_transformer import forward_prediction_heads
