@@ -15,9 +15,9 @@ import torch.nn.functional as F
 from torch.autograd import Function
 from torch.autograd.function import once_differentiable
 
-import MultiScaleDeformableAttention as MSDA
+#import MultiScaleDeformableAttention as MSDA
 
-
+MSDA= None
 class MSDeformAttnFunction(Function):
     @staticmethod
     def forward(ctx, value, value_spatial_shapes, value_level_start_index, sampling_locations, attention_weights, im2col_step):
