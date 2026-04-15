@@ -17,7 +17,7 @@ from util.logger import setup_logger
 from util.slconfig import DictAction, SLConfig
 from util.utils import ModelEma, BestMetricHolder
 import util.misc as utils
-from transformers import T5Tokenizer, T5ForConditionalGeneration, AdamW
+from transformers import T5Tokenizer, T5ForConditionalGeneration
 import dino_datasets
 from dino_datasets import build_dataset, get_coco_api_from_dataset
 from engine import evaluate, train_one_epoch, test
