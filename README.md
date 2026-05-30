@@ -46,6 +46,8 @@ It integrates detection, classification, segmentation, morphology prediction, an
    python test.py
    cd ../../..
    ```
+<details>
+  
 ## Paper
 
 📌 arXiv Preprint: https://arxiv.org/abs/2511.13889  
