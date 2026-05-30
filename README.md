@@ -1,4 +1,4 @@
-##🧬 Uni-Hema
+## Uni-Hema
 A Unified Model for Digital Hematopathology
 CVPR 2026
 
