@@ -21,7 +21,7 @@ It integrates detection, classification, segmentation, morphology prediction, an
 
    1. Clone this repo
    ```sh
-   git clone https://github.com/IDEA-Research/DINO.git
+   git clone https://github.com/intelligentMachines-ITU/Uni-Hema.git
    cd DINO
    ```
 
