@@ -45,7 +45,8 @@ It integrates detection, classification, segmentation, morphology prediction, an
    # unit test (should see all checking is True)
    python test.py
    cd ../../..
-   ```</details>
+   ```
+</details>
   
 ## Paper
 
