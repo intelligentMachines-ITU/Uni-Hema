@@ -1,7 +1,11 @@
-## Uni-Hema
-A Unified Model for Digital Hematopathology
-CVPR 2026
+# Uni-Hema: Unified Model for Digital Hematopathology
+![architecture_AttriDet](https://github.com/intelligentMachines-ITU/Blood-Cancer-Dataset/assets/155678287/e2004432-3411-4eea-bc27-cf2a6a6daab9)
 
+**Authors:** Abdul Rehman, Iqra Rasool, Ayisha Imran, Mohsen Ali, Waqas Sultani
+
+
+**CVPR 2026**
+**Paper:** [ArXiv](https://arxiv.org/abs/2511.13889)
 ---
 
 ## Overview
@@ -47,11 +51,13 @@ It integrates detection, classification, segmentation, morphology prediction, an
    ```
 </details>
   
-## Paper
+# For Demo 
+Demosntrarion can be performed by running the following bash script:
 
-📌 arXiv Preprint: https://arxiv.org/abs/2511.13889  
-📌 Conference: CVPR 2026
-
+```
+python app.py
+ 
+```
 ---
 
 ## Citation
