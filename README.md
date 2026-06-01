@@ -1,5 +1,5 @@
 # Uni-Hema: Unified Model for Digital Hematopathology
-![architecture_AttriDet](https://github.com/intelligentMachines-ITU/Blood-Cancer-Dataset/assets/155678287/e2004432-3411-4eea-bc27-cf2a6a6daab9)
+![architecture_AttriDet](models/1771700412172.jpeg)
 
 **Authors:** Abdul Rehman, Iqra Rasool, Ayisha Imran, Mohsen Ali, Waqas Sultani
 
