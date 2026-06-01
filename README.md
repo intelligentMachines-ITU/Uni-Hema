@@ -54,11 +54,17 @@ It integrates detection, classification, segmentation, morphology prediction, an
 ## Demosntrarion  
 Demosntrarion can be performed by running the following bash script:
 
+
 ```
 python app.py
  
 ```
+
 ---
+Step1: Select the task (detection, Segmentation, Classification, VQA )
+Step2: Select the image or upload 
+Step3: Run the Inference 
+
 
 ## Citation
 
