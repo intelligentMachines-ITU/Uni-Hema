@@ -17,7 +17,7 @@ from util.logger import setup_logger
 from util.slconfig import DictAction, SLConfig
 from util.utils import ModelEma, BestMetricHolder
 import util.misc as utils
-from transformers import T5Tokenizer, T5ForConditionalGeneration
+from transformers import T5Tokenizer, T5ForConditionalGeneration, AdamW
 import dino_datasets
 from dino_datasets import build_dataset, get_coco_api_from_dataset
 from engine import evaluate, train_one_epoch, test
@@ -45,7 +45,7 @@ def get_args_parser():
                         help='path where to save, empty for no saving')
     parser.add_argument('--note', default='',
                         help='add some notes to the experiment')
-    parser.add_argument('--device', default='cpu',
+    parser.add_argument('--device', default='cuda',
                         help='device to use for training / testing')
     parser.add_argument('--seed', default=42, type=int)
     parser.add_argument('--resume', default='', help='resume from checkpoint')
@@ -93,9 +93,8 @@ def main(args):
     print("Loading config file from {}".format(args.config_file))
     time.sleep(args.rank * 0.02)
     cfg = SLConfig.fromfile(args.config_file)
-    args.eval = True
     # args.coco_path = '/media/iml1/Disk2/Ali/Dino_changed_1/Dino_o_1/DINO/coco_data'
-    
+
     if args.options is not None:
         cfg.merge_from_dict(args.options)
     if args.rank == 0:
