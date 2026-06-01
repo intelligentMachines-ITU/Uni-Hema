@@ -2,7 +2,7 @@ import json
 import os
 import torch
 from PIL import Image
-
+from huggingface_hub import hf_hub_download
 from main import build_model_main
 from util.slconfig import SLConfig
 from util.visualizer import COCOVisualizer
@@ -39,18 +39,23 @@ def separate_domain_bit(outputs):
             separated_dict['aux_outputs'] = aux_outputs
         return separated_dict
 
-# Paths to the model config, checkpoint, and JSON file
-#model_config_path = "logs/dn_DABDETR/R50_3/config.json"
-#model_checkpoint_path = "logs/dn_DABDETR/R50_3/checkpoint0049.pth"
-#json_file_path = "M5_coco/annotations/lcm_test_1000x.json"  # Replace with your JSON file path
 
-model_config_path ="/media/iml/Abdul_1/UNI_X/upsamples_detetion_last_2/config_args_all.json" #"config.json" # change the path of the model config
-#model_checkpoint_path = "logs/dn_DABDETR/R50_9/checkpoint0049.pth" #"checkpoint_optimized_44.7ap.pth" # change the path of the model checkpoint
-model_checkpoint_path = "/media/iml/Abdul_1/UNI_X/upsamples_detetion_last_2/checkpoint0007.pth"
-json_file_path ="/home/iml/DINO/coco_data/M5_coco/annotations/hcm_test_400x_v2.json" # "/home/iml/DINO/M5_coco/annotations/hcm_test_p_1000x.json"
 
-output_dir = "/home/iml/DINO_X/logs/DINO_X/prompt/gt_hcm_40x_m5" 
-output_dir_2 = "/home/iml/DINO_X/logs/DINO_X/prompt/pr_hcm_40x_m5" # Replace with the directory where you want to save the results
+model_config_path =hf_hub_download(
+    repo_id=repo_id,
+    filename="config_args_all.json"
+)
+model_checkpoint_path =hf_hub_download(
+    repo_id=repo_id,
+    filename="checkpoint0023.pth"   # or pytorch_model.bin if you switch
+)
+json_file_path ="" # "/home/iml/DINO/M5_coco/annotations/hcm_test_p_1000x.json"
+
+output_dir = "" 
+output_dir_2 = "" 
+
+
+# Replace with the directory where you want to save the results
 
 # Create the output directory if it doesn't exist
 os.makedirs(output_dir, exist_ok=True)
