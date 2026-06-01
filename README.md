@@ -62,7 +62,9 @@ python app.py
 
 ---
 Step1: Select the task (detection, Segmentation, Classification, VQA )
+
 Step2: Select the image or upload 
+
 Step3: Run the Inference 
 
 
