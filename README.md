@@ -51,7 +51,7 @@ It integrates detection, classification, segmentation, morphology prediction, an
    ```
 </details>
   
-# For Demo 
+## Demosntrarion  
 Demosntrarion can be performed by running the following bash script:
 
 ```
