@@ -5,7 +5,7 @@
 
 
 **CVPR 2026**
-**Paper:** [ArXiv](https://arxiv.org/abs/2511.13889)
+#Paper [PDF]([https://arxiv.org/abs/2511.13889](https://openaccess.thecvf.com/content/CVPR2026/papers/Rehman_Uni-Hema_Unified_Model_for_Digital_Hematopathology_CVPR_2026_paper.pdf))
 ---
 
 ## Overview
