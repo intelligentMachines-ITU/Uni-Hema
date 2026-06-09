@@ -67,13 +67,25 @@ Step2: Select the image or upload
 
 Step3: Run the Inference 
 
+## Dataset  
+```
+python app.py
 
+```
+## Single Cell linear classifier model training and testing   
+```
+Set the train and test paths w.r.t the single cell datasets
+python uni_hema_Scc.py
+
+```
+---
 ## Citation
 
 ```bibtex
-@article{rehman2025unihema,
-  title   = {Uni-Hema: Unified Model for Digital Hematopathology},
-  author  = {Rehman, Abdul and Rasool, Iqra and Imran, Ayisha and Ali, Mohsen and Sultani, Waqas},
-  journal = {arXiv preprint arXiv:2511.13889},
-  year    = {2025}
+@inproceedings{rehman2026uni,
+  title={Uni-Hema: Unified Model for Digital Hematopathology},
+  author={Rehman, Abdul and Rasool, Iqra and Imran, Ayisha and Ali, Mohsen and Sultani, Waqas},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={37578--37589},
+  year={2026}
 }
