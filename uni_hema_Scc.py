@@ -46,7 +46,7 @@ test_json  = "annotations/classification/Raabin_testA_updated.json"
 # train_json = "merge_train/classification/Dunseen_data/RV_Pbs/PBC_8_DA/train_annotations.json"
 # test_json = "merge_train/classification/Dunseen_data/RV_Pbs/PBC_8_DA/test_annotations.json"
 # root_images = "merge_train/classification/Dunseen_data/"
-
+repo_id = "ryhm/Uni-hema"
 model_config_path = hf_hub_download(
     repo_id=repo_id,
     filename="config_args_all.json"
