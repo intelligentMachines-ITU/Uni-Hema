@@ -47,6 +47,16 @@ test_json  = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DIN
 # root_images = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/Dunseen_data/"
 model_config_path = "/home/iml_abdul/Uni_hema/check_step4_det/config_args_all.json"
 model_checkpoint_path = "/home/iml_abdul/Uni_hema/check_step4_det/checkpoint0005.pth"
+
+model_config_path = hf_hub_download(
+    repo_id=repo_id,
+    filename="config_args_all.json"
+)
+
+model_checkpoint_path = hf_hub_download(
+    repo_id=repo_id,
+    filename="checkpoint0023.pth"   # or pytorch_model.bin if you switch
+)
 prompt_text = (["myeloblast"],)   # adjust if needed
 
 
