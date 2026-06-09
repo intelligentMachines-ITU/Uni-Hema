@@ -5,8 +5,10 @@
 
 
 **CVPR 2026**
-##Paper 
-[PDF]([https://openaccess.thecvf.com/content/CVPR2026/papers/Rehman_Uni-Hema_Unified_Model_for_Digital_Hematopathology_CVPR_2026_paper.pdf])
+### Paper
+
+📄 **PDF:** [Uni-Hema: Unified Model for Digital Hematopathology](https://openaccess.thecvf.com/content/CVPR2026/papers/Rehman_Uni-Hema_Unified_Model_for_Digital_Hematopathology_CVPR_2026_paper.pdf)
+
 ---
 
 ## Overview
