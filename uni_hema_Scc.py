@@ -13,40 +13,39 @@ from torch.utils.data import Dataset, DataLoader
 from main import build_model_main
 from util.slconfig import SLConfig
 import dino_datasets.transforms as T
+from huggingface_hub import hf_hub_download
 
 # === CONFIG ===
-# train_json = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/annotations/classification/BM_cytomorphology_data_train.json"
-# test_json  = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/annotations/classification/BM_cytomorphology_data_test.json"
-root_images = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification"  # where file_name in JSON is relative to BMCD_FGCD_train.json/'
-# root_images = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/Dunseen_data/bloodmnist_224/"
-# train_json = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/annotations/classification/BMCD_FGCD_train.json"
-# test_json  = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/annotations/classification/BMCD_FGCD_test.json"
-# train_json = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/Dunseen_data/bloodmnist_224/mnist_train_annotations.json"
-# test_json  = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/Dunseen_data/bloodmnist_224/mnist_test_annotations.json"
-# root_images = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/Dunseen_data/bloodmnist_224/"
-# train_json = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/Dunseen_data/PKG - C-NMC 2019/c_nmc_all_folds_train.json"
-# test_json  = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/Dunseen_data/PKG - C-NMC 2019/c_nmc_all_folds_test.json"
-# root_images = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/Dunseen_data/PKG - C-NMC 2019"
-train_json = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/annotations/classification/raabin_Train_update.json"
-test_json  = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/annotations/classification/Raabin_testA_updated.json"
-# /media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/Dunseen_data/PKG - C-NMC 2019/c_nmc_all_folds_train.json
-# train_json = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/annotations/classification/train_Acevedo_update_20.json"
-# test_json  = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/annotations/classification/test_Acevedo_update_20.json"
-# /media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/Dunseen_data/PKG - C-NMC 2019/c_nmc_all_folds_train.json
-# train_json = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/annotations/classification/acevedo_2_class/train_Acevedo_update_2_class.json"
-# test_json  = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/annotations/classification/acevedo_2_class/test_Acevedo_update_2_class.json"
-# root_images = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/"
-# train_json= "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/annotations/classification/Parasite Data Set_train.json"
-# test_json= "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/annotations/classification/Parasite Data Set_test.json"
-#root_images = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/"
-# train_json= "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/Dunseen_data/RV_Pbs/classification_data/train_annotations.json"
-# test_json = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/Dunseen_data/RV_Pbs/classification_data/test_annotations.json"
-# root_images = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/Dunseen_data/"
-# train_json = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/Dunseen_data/RV_Pbs/PBC_8_DA/train_annotations.json"
-# test_json = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/Dunseen_data/RV_Pbs/PBC_8_DA/test_annotations.json"
-# root_images = "/media/iml_abdul/40a71b91-5aab-40ee-a60a-16e92f17d93f/home/iml/DINO/coco_data/merge_train/classification/Dunseen_data/"
-model_config_path = "/home/iml_abdul/Uni_hema/check_step4_det/config_args_all.json"
-model_checkpoint_path = "/home/iml_abdul/Uni_hema/check_step4_det/checkpoint0005.pth"
+# train_json = "annotations/classification/BM_cytomorphology_data_train.json"
+# test_json  = "annotations/classification/BM_cytomorphology_data_test.json"
+root_images = "merge_train/classification"  # where file_name in JSON is relative to BMCD_FGCD_train.json/'
+# root_images = "merge_train/classification/Dunseen_data/bloodmnist_224/"
+# train_json = "annotations/classification/BMCD_FGCD_train.json"
+# test_json  = "annotations/classification/BMCD_FGCD_test.json"
+# train_json = "merge_train/classification/Dunseen_data/bloodmnist_224/mnist_train_annotations.json"
+# test_json  = "merge_train/classification/Dunseen_data/bloodmnist_224/mnist_test_annotations.json"
+# root_images = "merge_train/classification/Dunseen_data/bloodmnist_224/"
+# train_json = "merge_train/classification/Dunseen_data/PKG - C-NMC 2019/c_nmc_all_folds_train.json"
+# test_json  = "merge_train/classification/Dunseen_data/PKG - C-NMC 2019/c_nmc_all_folds_test.json"
+# root_images = "merge_train/classification/Dunseen_data/PKG - C-NMC 2019"
+train_json = "annotations/classification/raabin_Train_update.json"
+test_json  = "annotations/classification/Raabin_testA_updated.json"
+# merge_train/classification/Dunseen_data/PKG - C-NMC 2019/c_nmc_all_folds_train.json
+# train_json = "annotations/classification/train_Acevedo_update_20.json"
+# test_json  = "annotations/classification/test_Acevedo_update_20.json"
+# merge_train/classification/Dunseen_data/PKG - C-NMC 2019/c_nmc_all_folds_train.json
+# train_json = "annotations/classification/acevedo_2_class/train_Acevedo_update_2_class.json"
+# test_json  = "annotations/classification/acevedo_2_class/test_Acevedo_update_2_class.json"
+# root_images = "merge_train/classification/"
+# train_json= "annotations/classification/Parasite Data Set_train.json"
+# test_json= "annotations/classification/Parasite Data Set_test.json"
+#root_images = "merge_train/classification/"
+# train_json= "merge_train/classification/Dunseen_data/RV_Pbs/classification_data/train_annotations.json"
+# test_json = "merge_train/classification/Dunseen_data/RV_Pbs/classification_data/test_annotations.json"
+# root_images = "merge_train/classification/Dunseen_data/"
+# train_json = "merge_train/classification/Dunseen_data/RV_Pbs/PBC_8_DA/train_annotations.json"
+# test_json = "merge_train/classification/Dunseen_data/RV_Pbs/PBC_8_DA/test_annotations.json"
+# root_images = "merge_train/classification/Dunseen_data/"
 
 model_config_path = hf_hub_download(
     repo_id=repo_id,
