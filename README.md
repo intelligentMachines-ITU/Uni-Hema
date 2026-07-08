@@ -75,8 +75,8 @@ Step3: Run the Inference
 
 | Task | Dataset | Dataset Link | Paper Link |
 |------|---------|--------------|------------|
-| **Segmentation** | Malaria-Detection-2019 | [Link](#) | [Link](#) |
-|  | NuClick | [Link](#) | [Link](#) |
+| **Segmentation** | Malaria-Detection-2019 | [Link](https://data.mendeley.com/public-api/zip/5bf2kmwvfn/download/1) | [Link](https://link.springer.com/article/10.1186/s13000-020-01040-9) |
+|  | NuClick | [Link](https://github.com/navidstuv/NuClick) | [Link](https://arxiv.org/pdf/2005.14511.pdf) |
 |  | KRD-WBC | [Link](#) | [Link](#) |
 |  | WBC Image Dataset | [Link](#) | [Link](#) |
 |  | White Blood Cell Dataset | [Link](#) | [Link](#) |
