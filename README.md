@@ -71,6 +71,57 @@ Step2: Select the image or upload
 Step3: Run the Inference 
 
 ## Dataset  
+
+
+| Task | Dataset | Dataset Link | Paper Link |
+|------|---------|--------------|------------|
+| **Segmentation** | Malaria-Detection-2019 | [Link](#) | [Link](#) |
+|  | NuClick | [Link](#) | [Link](#) |
+|  | KRD-WBC | [Link](#) | [Link](#) |
+|  | WBC Image Dataset | [Link](#) | [Link](#) |
+|  | White Blood Cell Dataset | [Link](#) | [Link](#) |
+|  | ErythrocytesIDB | [Link](#) | [Link](#) |
+|  | AneRBC-II-Anemic | [Link](#) | — |
+|  | AneRBC-II-Healthy | [Link](#) | — |
+|  | MP-IDB | [Link](#) | [Link](#) |
+|  | Elsafty-RBC for AI | [Link](#) | [Link](#) |
+|  | BBBC041Seg | [Link](#) | [Link](#) |
+|  | SSL Seg | [Link](#) | [Link](#) |
+| **Detection** | LeukemiaAttri | [Link](#) | [Link](#) |
+|  | M5 | [Link](#) | [Link](#) |
+|  | TXL PBC | — | — |
+|  | BCCD | [Link](#) | [Link](#) |
+|  | Sickle-cell | [Link](#) | [Link](#) |
+|  | Plasmodium | — | — |
+|  | Plasmodium Phonecamera | — | — |
+|  | Tuberculosis Phonecamera | — | — |
+|  | Vivax | [Link](#) | [Link](#) |
+|  | ThickBloodSmears | [Link](#) | [Link](#) |
+|  | NIH-NLM-Thick PV | [Link](#) | [Link](#) |
+|  | Parasite | [Link](#) | — |
+|  | Acevedo | [Link](#) | [Link](#) |
+|  | MP-IDB | [Link](#) | [Link](#) |
+|  | Bio-Net | [Link](#) | [Link](#) |
+|  | Raabin-M1 | [Link](#) | [Link](#) |
+|  | Raabin-M2 | [Link](#) | — |
+| **Classification** | BMC | [Link](#) | [Link](#) |
+|  | AML Matek | [Link](#) | [Link](#) |
+|  | Raabin WBC | [Link](#) | [Link](#) |
+|  | Warty Pig | [Link](#) | [Link](#) |
+|  | LISC | [Link](#) | [Link](#) |
+|  | KRD-WBC | [Link](#) | [Link](#) |
+|  | BCCD | [Link](#) | [Link](#) |
+|  | HRLS | — | — |
+|  | APL_AML | [Link](#) | [Link](#) |
+|  | White-Blood-Cell-Dataset | [Link](#) | [Link](#) |
+|  | Acevedo | [Link](#) | [Link](#) |
+|  | RV PBS | [Link](#) | [Link](#) |
+|  | PBC-8-DA | [Link](#) | — |
+|  | C-NMC2019 | [Link](#) | — |
+|  | BloodMNIST | [Link](#) | [Link](#) |
+|  | AML Hehr | [Link](#) | [Link](#) |
+
+
 1: All the datasets are publicly available, and the details are given in the supplementary. 
 2: The annotations of all the training and testing datasets are available in the dataset_annotation folder. 
 
